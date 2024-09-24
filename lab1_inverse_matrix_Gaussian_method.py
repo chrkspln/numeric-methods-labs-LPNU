@@ -57,6 +57,13 @@ def rotated_matrix(matrix):
                     matrix_V[g][m] -= factor * matrix_V[i][m]
                     inverse[g][m] -= factor * inverse[i][m]
 
+    print("\nMatrix A:\n", A)
+    inverse = np.array(inverse)
+    print("\nMatrix_V:\n", matrix_V)
+    print("\nInverse:\n", inverse)
+    identity_check = np.dot(A, inverse)
+    print("\nA * A^-1 =\n", identity_check)
+
 
 if __name__ == "__main__":
     rotated_matrix(A)
