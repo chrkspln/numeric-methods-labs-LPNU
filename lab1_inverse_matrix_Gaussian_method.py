@@ -77,8 +77,8 @@ def rotated_matrix(matrix):
 
     print("\nMatrix A:\n", A)
     inverse = np.array(inverse)
-    print("\nMatrix_V:\n", matrix_V)
-    print("\nInverse:\n", inverse)
+    print("\nMatrix_V (after rotating A):\n", matrix_V)
+    print("\nInverse (after rotating A):\n", inverse)
     identity_check = np.dot(A, inverse)
     print("\nA * A^-1 =\n", identity_check)
 
