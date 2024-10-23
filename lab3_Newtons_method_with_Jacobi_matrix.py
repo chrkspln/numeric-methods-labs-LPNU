@@ -83,7 +83,7 @@ def newton_method(x0, tol=1e-6, max_iter=100):
             print(f"Збіжність досягнута за {k} ітерацій.")
             return x_new
 
-        print(f"Ітерація {k}: x = {x_new}, ||F(x)|| = {norm_F_val}")
+        print(f"Ітерація {k}: x = {x_new}, F(x) = {norm_F_val}")
         # Оновлюємо x
         x_old = x_new
 
