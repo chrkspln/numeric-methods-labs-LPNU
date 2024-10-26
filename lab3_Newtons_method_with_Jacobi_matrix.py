@@ -20,7 +20,7 @@ def F(x):
 def jacobian(x, h=1e-5):
     n = len(x)
     J = np.zeros((n, n))
-    F_x = F(x)  # Обчислюємо F(x) тільки один раз
+    F_x = F(x)
     for j in range(n):
         x_forward = np.copy(x)
         x_forward[j] += h
@@ -29,13 +29,12 @@ def jacobian(x, h=1e-5):
     return J
 
 
-# Метод Гауса для розв'язку системи рівнянь Ax = b
 def gauss_solve(A, b):
     n = len(b)
     # Прямий хід
     for i in range(n):
-        if abs(A[i, i]) < 1e-12:
-            raise ValueError("Матриця вироджена або близька до виродження.")
+        if abs(A[i, i]) == 0:
+            raise ValueError("Матриця вироджена.")
         # Пошук головного елемента
         max_row = np.argmax(np.abs(A[i:n, i])) + i
         if i != max_row:

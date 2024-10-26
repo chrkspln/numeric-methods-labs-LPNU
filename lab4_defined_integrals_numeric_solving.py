@@ -62,7 +62,7 @@ F_vals = [F(x_val).evalf() for x_val in x_values]
 I_approx = midpoint(integral_f, h, n)
 # Обчислюємо точне значення I
 I_exact = F_1 - F_0
-I_exact.evalf()  # Обчислення числового значення
+I_exact.evalf()  
 
 print(I_approx)
 print(I_exact)
